@@ -44,7 +44,7 @@ Carlos Erwin Hurtatiz Gomez
 
 **Programa:** Ingenieria de Sistemas
 
-**Grupo:** 54465 - 54463
+**Grupo:** 54469
 
 **Docente:** **Veronica Castro**
 
