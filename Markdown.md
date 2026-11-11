@@ -186,7 +186,7 @@ RNF-06	Mantenibilidad	El código en C# debe incluir documentación en línea y n
 
 ## 5.1 Diagrama de casos de uso
 
-![DIAGRAMA](master\Diagramadecasouso.jpeg)
+![DIAGRAMA](https://github.com/samael-alean/Aca_Biblioteca/blob/0acedc917f38dacb45d12745a1d84baccb49babf/Diagramadecasouso.jpeg)
 
 
 ## 5.2 Descripción de casos de uso
