@@ -233,7 +233,7 @@ Representa la estructura de la base de datos y permite organizar la informacion 
 
 Insertar aquí el modelo entidad-relación.
 
-![Modelo entidad-relación](https://github.com/samael-alean/Aca_Biblioteca/blob/0acedc917f38dacb45d12745a1d84baccb49babf/MER.jpeg))
+![Modelo entidad-relación](https://github.com/samael-alean/Aca_Biblioteca/blob/abd4963e08cef8ced48ffe43ef2c922c72e2fcc4/MER.jpeg)
 
 ## 7.3 Relaciones principales
 
