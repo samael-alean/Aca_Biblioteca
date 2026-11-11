@@ -233,7 +233,7 @@ Representa la estructura de la base de datos y permite organizar la informacion 
 
 Insertar aquí el modelo entidad-relación.
 
-![Modelo entidad-relación]([ruta/al/modelo-entidad-relacion.png](https://github.com/samael-alean/Aca_Biblioteca/blob/0acedc917f38dacb45d12745a1d84baccb49babf/MER.jpeg))
+![Modelo entidad-relación](https://github.com/samael-alean/Aca_Biblioteca/blob/0acedc917f38dacb45d12745a1d84baccb49babf/MER.jpeg))
 
 ## 7.3 Relaciones principales
 
@@ -620,4 +620,4 @@ Sommerville, I. (2019). Ingeniería de Software (10.ª ed.). Pearson Educación.
 
 ## Anexo C. Evidencia de Git y GitHub
 
-![Evidencia](https://github.com/samael-alean/Aca_Biblioteca/blob/0acedc917f38dacb45d12745a1d84baccb49babf/EvidenciaGit.jpeg)
+![Evidencia](https://github.com/samael-alean/Aca_Biblioteca/blob/0acedc917f38dacb45d12745a1d84baccb49babf/EvidenciaGit.jpg)
