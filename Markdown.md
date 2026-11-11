@@ -620,4 +620,4 @@ Sommerville, I. (2019). Ingeniería de Software (10.ª ed.). Pearson Educación.
 
 ## Anexo C. Evidencia de Git y GitHub
 
-![Evidencia](https://github.com/samael-alean/Aca_Biblioteca/blob/0acedc917f38dacb45d12745a1d84baccb49babf/EvidenciaGit.jpg)
+![Evidencia](https://github.com/samael-alean/Aca_Biblioteca/blob/96863dc4c1afe23e68fe355100249fb26e26d2b9/EvidenciaGit.jpg)
