@@ -528,11 +528,7 @@ Sección evidencias de funcionalidades
 
 # 11. PRUEBAS DE FUNCIONAMIENTO
 
-## 11.1 Estrategia de pruebas
-
-Describir cómo se verificó el funcionamiento del sistema.
-
-## 11.2 Casos de prueba
+## 11.1 Casos de prueba
 
   ------------------------------------------------------------------------------------------
   ID          Funcionalidad   Entrada / Acción Resultado        Resultado       Estado
@@ -562,7 +558,7 @@ Describir cómo se verificó el funcionamiento del sistema.
                    
   ------------------------------------------------------------------------------------------
 
-## 11.3 Evidencias de pruebas
+## 11.2 Evidencias de pruebas
 
 Insertar capturas que demuestren los resultados de las pruebas.
 
