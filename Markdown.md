@@ -372,7 +372,7 @@ La arquitectura está compuesta por:
 
 Insertar aquí el diagrama de arquitectura.
 
-![ARQUITECTURA](https://github.com/samael-alean/Aca_Biblioteca/blob/0acedc917f38dacb45d12745a1d84baccb49babf/ARQUI.jpeg)
+![ARQUITECTURA](https://github.com/samael-alean/Aca_Biblioteca/blob/fca9a1f3bf45f09f88c2aabfc6feeb00b0fdccb2/ARQUI.jpeg)
 
 ## 9.3 Capa de Presentación
 
