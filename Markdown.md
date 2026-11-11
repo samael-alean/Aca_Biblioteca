@@ -523,7 +523,7 @@ Sección evidencias de funcionalidades
 
 ## 10.8 Consultas
 
-![Consultas](ruta/captura-consultas.png)
+![Consultas](https://github.com/samael-alean/Aca_Biblioteca/blob/5d5fd1c89400de273d363539e2fc91d5444a3d83/Modulos%20Finales(Pr%C3%A9stamos%20-%20Reportes)/Interfaces/Interfaz%20Pr%C3%A9stamos.png)
 
 ------------------------------------------------------------------------
 
