@@ -474,61 +474,9 @@ llegar nuevamente a la interfaz.
 
 ------------------------------------------------------------------------
 
-# 10. CAPTURAS DE PANTALLA DEL SISTEMA
+# 10. PRUEBAS DE FUNCIONAMIENTO
 
-Sección evidencias de funcionalidades
-
-## 10.1 Menú principal
-
-![Menú principal](ruta/captura-menu.png)
-
-
-
-## 10.2 Gestión de libros
-
-![Gestión de libros](ruta/captura-libros.png)
-
-
-
-## 10.3 Gestión de autores
-
-![Gestión de autores](ruta/captura-autores.png)
-
-
-
-## 10.4 Gestión de categorías
-
-![Gestión de categorías](ruta/captura-categorias.png)
-
-
-
-## 10.5 Gestión de usuarios
-
-![Gestión de usuarios](ruta/captura-usuarios.png)
-
-
-
-## 10.6 Registro de préstamos
-
-![Registro de préstamos](ruta/captura-prestamos.png)
-
-
-
-## 10.7 Registro de devoluciones
-
-![Registro de devoluciones](ruta/captura-devoluciones.png)
-
-
-
-## 10.8 Consultas
-
-![Consultas](https://github.com/samael-alean/Aca_Biblioteca/blob/5d5fd1c89400de273d363539e2fc91d5444a3d83/Modulos%20Finales(Pr%C3%A9stamos%20-%20Reportes)/Interfaces/Interfaz%20Pr%C3%A9stamos.png)
-
-------------------------------------------------------------------------
-
-# 11. PRUEBAS DE FUNCIONAMIENTO
-
-## 11.1 Casos de prueba
+## 10.1 Casos de prueba
 
   ------------------------------------------------------------------------------------------
   ID          Funcionalidad   Entrada / Acción Resultado        Resultado       Estado
@@ -555,35 +503,17 @@ Sección evidencias de funcionalidades
               devolución                       devolución y                     
                                                actualizar                       
                                                disponibilidad                   
-                   
-  ------------------------------------------------------------------------------------------
-
-## 11.2 Evidencias de pruebas
-
-Insertar capturas que demuestren los resultados de las pruebas.
-
-### Prueba CP01
-
-![Evidencia CP01](ruta/prueba01.png)
-
-**Resultado:** \[Descripción.\]
-
-### Prueba CP02
-
-![Evidencia CP02](ruta/prueba02.png)
-
-**Resultado:** \[Descripción.\]
 
 ------------------------------------------------------------------------
 
-# 12. CONCLUSIONES
+# 11. CONCLUSIONES
 
 El desarrollo del Sistema de Gestión de Biblioteca en C#, Windows Forms y SQL Server ha permitido dar solución a los cuellos de botella de información de la institución educativa, logrando un control automatizado del catálogo y del ciclo de vida de los préstamos.
 El modelado de la base de datos bajo la Tercera Forma Normal (3FN) cumple con los requisitos de integridad referencial, eliminando redundancias en autores, editoriales, préstamos y usuarios.
 La implementación de una arquitectura en N-Capas desacopla la lógica de acceso a datos de la interfaz gráfica, facilitando la mantenibilidad y escalabilidad del sistema.
 Las pruebas de funcionamiento demuestran que las transacciones complejas (actualizaciones simultáneas de cabeceras de préstamo y stock de ejemplares) se realizan cumpliendo los principios ACID, garantizando la consistencia operativa.
 
-# 13. RECOMENDACIONES
+# 12. RECOMENDACIONES
 
 Implementación de lectores de código de barras/RFID: Adaptar la interfaz gráfica en Windows Forms para permitir la captura automatizada mediante código de barras o etiquetas RFID tanto en carnés de usuarios como en el material bibliográfico.
 Migración a Servicios Web (Web API): Evolucionar la capa de datos hacia una API RESTful que permita la integración de futuras plataformas web y móviles para los estudiantes.
@@ -592,7 +522,7 @@ Módulo de Notificaciones: Integrar un servicio de mensajería/correo electróni
 
 ------------------------------------------------------------------------
 
-# 14. REFERENCIAS BIBLIOGRÁFICAS
+# 13. REFERENCIAS BIBLIOGRÁFICAS
 
 Ceballos, F. J. (2019). Enciclopedia de Microsoft Visual C# (5.ª ed.). Alfaomega / Ra-Ma.
 Date, C. J. (2018). Introducción a los sistemas de bases de datos (8.ª ed.). Pearson Educación.
