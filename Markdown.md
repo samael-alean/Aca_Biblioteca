@@ -430,15 +430,14 @@ Gestiona la comunicación entre la aplicación y SQL Server.
 
 **Tecnologías utilizadas:**
 
--   SQL Server.
--   ADO.NET / \[tecnología realmente utilizada\].
--   Consultas parametrizadas.
+-   SQL Server
+-   Consultas parametrizadas
 
 ## 9.6 Capa de Base de Datos
 
 La información del sistema se almacena en:
 
-**Base de datos:** `[NombreBaseDatos]`
+**Base de datos:** Querys BD - AcaBiblioteca
 
 **Tablas principales:**
 
@@ -616,7 +615,7 @@ Sommerville, I. (2019). Ingeniería de Software (10.ª ed.). Pearson Educación.
 
 ## Anexo B. Script de base de datos
 
-**Archivo:** `[Nombre del archivo .sql]`
+**Archivo:** Querys BD .- AcaBiblioteca
 
 ## Anexo C. Evidencia de Git y GitHub
 
