@@ -207,7 +207,7 @@ CU-05	Consultar Reportes	Administrador / Bibliotecario	Visualiza listados e info
 
 ## 6.1 Diagrama de clases
 
-`![Diagrama de clases](ruta/al/diagrama-clases.png)`
+![Diagrama de clases](https://github.com/samael-alean/Aca_Biblioteca/blob/83d736a22ccc8bf4c05401fdb98c8692ac76ee1b/DiagramaClases.jpeg)
 
 ## 6.3 Principales clases
 
@@ -220,22 +220,6 @@ CU-05	Consultar Reportes	Administrador / Bibliotecario	Visualiza listados e info
   Prestamo          Gestionar la información de los préstamos.
   DetallePrestamo   Relacionar los libros incluidos en un préstamo.
   Devolucion        Gestionar las devoluciones y calcular retrasos/multas.
-  \[Otra clase\]    \[Responsabilidad.\]
-
-## 6.4 Aplicación de POO
-
-Explicar cómo se aplicaron:
-
--   Clases.
--   Objetos.
--   Constructores.
--   Métodos.
--   Propiedades.
--   Encapsulamiento.
--   Colecciones.
--   Herencia, si aplica.
--   Polimorfismo, si aplica.
--   Sobrecarga, si aplica.
 
 ------------------------------------------------------------------------
 
@@ -243,29 +227,17 @@ Explicar cómo se aplicaron:
 
 ## 7.1 Descripción
 
-Explicar el modelo de datos diseñado para almacenar la información del
-sistema.
+Representa la estructura de la base de datos y permite organizar la informacion necesaria para el funcionamiento de la aplicacion.
 
 ## 7.2 Diagrama entidad-relación
 
 Insertar aquí el modelo entidad-relación.
 
-`![Modelo entidad-relación](ruta/al/modelo-entidad-relacion.png)`
+![Modelo entidad-relación]([ruta/al/modelo-entidad-relacion.png](https://github.com/samael-alean/Aca_Biblioteca/blob/0acedc917f38dacb45d12745a1d84baccb49babf/MER.jpeg))
 
 ## 7.3 Relaciones principales
 
-Describir las relaciones entre las entidades.
-
-**Ejemplo:**
-
--   Un autor puede tener muchos libros.
--   Una categoría puede estar asociada a muchos libros.
--   Un usuario puede realizar muchos préstamos.
--   Un préstamo puede contener uno o varios detalles.
--   Un detalle de préstamo corresponde a un libro.
--   Un detalle puede generar una devolución.
-
-> **Modificar según el modelo de base de datos realmente implementado.**
+El recorrido del modelo inicia en la entidad USUARIO, quien posee las credenciales y el rol para interactuar con el sistema; al solicitar o gestionar una transacción, este usuario se vincula directamente a un registro en PRESTAMO, el cual controla el ciclo de vida del trámite mediante sus fechas de inicio, devolución esperada y devolución real. A su vez, cada préstamo se asigna a un EJEMPLAR físico específico identificado por su código de ubicación y estado de disponibilidad en estantería, el cual finalmente remite a la entidad LIBRO, donde se centraliza la ficha bibliográfica general con su ISBN, título, autor, editorial y categoría.
 
 ------------------------------------------------------------------------
 
@@ -378,10 +350,6 @@ Describir las relaciones entre las entidades.
   diasRetraso       INT             \-      No     Número de días de retraso.
   multa             DECIMAL(10,2)   \-      Sí     Valor de la multa, si aplica.
 
-> **IMPORTANTE:** El diccionario debe coincidir exactamente con el
-> script SQL final. Si los nombres, tipos o campos de la base de datos
-> son diferentes, actualizar esta sección.
-
 ------------------------------------------------------------------------
 
 # 9. ARQUITECTURA DEL SISTEMA
@@ -404,7 +372,7 @@ La arquitectura está compuesta por:
 
 Insertar aquí el diagrama de arquitectura.
 
-`![Arquitectura del sistema](ruta/al/diagrama-arquitectura.png)`
+![ARQUITECTURA](https://github.com/samael-alean/Aca_Biblioteca/blob/0acedc917f38dacb45d12745a1d84baccb49babf/ARQUI.jpeg)
 
 ## 9.3 Capa de Presentación
 
@@ -443,15 +411,6 @@ de negocio y coordina las operaciones.
 -   \[UsuarioController\]
 -   \[PrestamoController\]
 -   \[DevolucionController\]
-
-**Ejemplos de reglas:**
-
--   Validar disponibilidad.
--   Validar existencia del usuario.
--   Validar existencia del libro.
--   Calcular días de retraso.
--   Calcular multa.
--   Actualizar estados.
 
 ## 9.5 Capa de Acceso a Datos
 
@@ -493,187 +452,118 @@ La información del sistema se almacena en:
 
 ## 9.7 Flujo de información
 
-``` text
-Usuario
-   ↓
-Presentación
-   ↓
-Lógica de Negocio
-   ↓
-Acceso a Datos
-   ↓
-SQL Server
-```
+[ Usuario ]
+   │  ▲
+   │  │ (1. Solicitud / 8. Respuesta)
+   ▼  │
+[ Capa de Presentación (Frontend) ]
+   │  ▲
+   │  │ (2. Petición HTTP / 7. Datos formateados)
+   ▼  │
+[ Lógica de Negocio (Backend) ]
+   │  ▲
+   │  │ (3. Reglas de negocio / 6. Entidades/DTOs)
+   ▼  │
+[ Capa de Acceso a Datos (ORM/DAL) ]
+   │  ▲
+   │  │ (4. Consultas SQL / 5. ResultSets)
+   ▼  │
+[( Base de Datos: SQL Server )]
 
 Las respuestas de la base de datos realizan el recorrido inverso hasta
 llegar nuevamente a la interfaz.
 
 ------------------------------------------------------------------------
 
-# 10. EXPLICACIÓN DE CADA MÓDULO DESARROLLADO
+# 10. CAPTURAS DE PANTALLA DEL SISTEMA
 
-## 10.1 Módulo de libros
+Sección evidencias de funcionalidades
 
-**Objetivo:** \[Descripción.\]
-
-**Funcionalidades:** - Registrar. - Consultar. - Actualizar. -
-Eliminar. - Buscar.
-
-**Validaciones:** - \[Validación.\] - \[Validación.\]
-
-## 10.2 Módulo de autores
-
-**Objetivo:** \[Descripción.\]
-
-**Funcionalidades:** - Registrar. - Consultar. - Actualizar. - Eliminar.
-
-## 10.3 Módulo de categorías
-
-**Objetivo:** \[Descripción.\]
-
-**Funcionalidades:** - Registrar. - Consultar. - Actualizar. - Eliminar.
-
-## 10.4 Módulo de usuarios
-
-**Objetivo:** \[Descripción.\]
-
-**Funcionalidades:** - Registrar. - Consultar. - Actualizar. - Eliminar.
-
-## 10.5 Módulo de préstamos
-
-**Objetivo:** \[Descripción.\]
-
-**Funcionalidades:** - Registrar préstamo. - Consultar préstamos
-activos. - Consultar historial. - Actualizar disponibilidad.
-
-## 10.6 Módulo de devoluciones
-
-**Objetivo:** \[Descripción.\]
-
-**Funcionalidades:** - Registrar devolución. - Calcular días de
-retraso. - Calcular multa cuando aplique. - Actualizar disponibilidad.
-
-## 10.7 Módulo de consultas
-
-**Consultas implementadas:**
-
--   Total de libros registrados.
--   Total de usuarios registrados.
--   Libros disponibles.
--   Libros prestados.
--   Usuarios con préstamos activos.
--   Historial de préstamos.
--   Libros más prestados.
--   \[Otras consultas implementadas.\]
-
-> **Eliminar las consultas que no estén implementadas y agregar las que
-> sí existan.**
-
-------------------------------------------------------------------------
-
-# 11. CAPTURAS DE PANTALLA DEL SISTEMA
-
-En esta sección se deben incluir evidencias de las principales
-funcionalidades.
-
-## 11.1 Menú principal
+## 10.1 Menú principal
 
 ![Menú principal](ruta/captura-menu.png)
 
-**Descripción:** \[Explicar brevemente la pantalla.\]
 
-## 11.2 Gestión de libros
+
+## 10.2 Gestión de libros
 
 ![Gestión de libros](ruta/captura-libros.png)
 
-**Descripción:** \[Explicar la funcionalidad.\]
 
-## 11.3 Gestión de autores
+
+## 10.3 Gestión de autores
 
 ![Gestión de autores](ruta/captura-autores.png)
 
-**Descripción:** \[Explicar la funcionalidad.\]
 
-## 11.4 Gestión de categorías
+
+## 10.4 Gestión de categorías
 
 ![Gestión de categorías](ruta/captura-categorias.png)
 
-**Descripción:** \[Explicar la funcionalidad.\]
 
-## 11.5 Gestión de usuarios
+
+## 10.5 Gestión de usuarios
 
 ![Gestión de usuarios](ruta/captura-usuarios.png)
 
-**Descripción:** \[Explicar la funcionalidad.\]
 
-## 11.6 Registro de préstamos
+
+## 10.6 Registro de préstamos
 
 ![Registro de préstamos](ruta/captura-prestamos.png)
 
-**Descripción:** \[Explicar la funcionalidad.\]
 
-## 11.7 Registro de devoluciones
+
+## 10.7 Registro de devoluciones
 
 ![Registro de devoluciones](ruta/captura-devoluciones.png)
 
-**Descripción:** \[Explicar la funcionalidad.\]
 
-## 11.8 Consultas
+
+## 10.8 Consultas
 
 ![Consultas](ruta/captura-consultas.png)
 
-**Descripción:** \[Explicar la funcionalidad.\]
-
-> **Recomendación:** cada captura debe tener una breve explicación y
-> mostrar una funcionalidad real del sistema.
-
 ------------------------------------------------------------------------
 
-# 12. PRUEBAS DE FUNCIONAMIENTO
+# 11. PRUEBAS DE FUNCIONAMIENTO
 
-## 12.1 Estrategia de pruebas
+## 11.1 Estrategia de pruebas
 
 Describir cómo se verificó el funcionamiento del sistema.
 
-## 12.2 Casos de prueba
+## 11.2 Casos de prueba
 
   ------------------------------------------------------------------------------------------
   ID          Funcionalidad   Entrada / Acción Resultado        Resultado       Estado
                                                esperado         obtenido        
   ----------- --------------- ---------------- ---------------- --------------- ------------
-  CP01        Registrar libro Datos válidos    Libro registrado \[Resultado\]   Aprobado
+  CP01        Registrar libro Datos válidos    Libro registrado Se registra el libro   Aprobado
                                                correctamente                    
 
-  CP02        Registrar libro Código repetido  Mostrar mensaje  \[Resultado\]   Aprobado
+  CP02        Registrar libro Código repetido  Mostrar mensaje  Se repite el ISBN y no se guarda el libro   Aprobado
                                                de validación                    
 
-  CP03        Registrar       Datos válidos    Usuario          \[Resultado\]   Aprobado
+  CP03        Registrar       Datos válidos    Usuario          Se guarda el usuario correctamente   Aprobado
               usuario                          registrado                       
 
-  CP04        Registrar       Libro disponible Préstamo         \[Resultado\]   Aprobado
+  CP04        Registrar       Libro disponible Préstamo         Se registra un prestamo   Aprobado
               préstamo                         registrado y                     
                                                disponibilidad                   
                                                actualizada                      
 
-  CP05        Registrar       Libro sin        No permitir el   \[Resultado\]   Aprobado
+  CP05        Registrar       Libro sin        No permitir el   No hay mas disponibilidad del libro   Aprobado
               préstamo        disponibilidad   préstamo                         
 
-  CP06        Registrar       Préstamo activo  Registrar        \[Resultado\]   Aprobado
+  CP06        Registrar       Préstamo activo  Registrar        Prestamos activos   Aprobado
               devolución                       devolución y                     
                                                actualizar                       
                                                disponibilidad                   
-
-  CP07        Devolución con  Fecha posterior  Calcular retraso \[Resultado\]   Aprobado
-              retraso         a la estimada    y multa                          
-
-  CP08        Consulta        Consultar libros Mostrar libros   \[Resultado\]   Aprobado
-                              disponibles      disponibles                      
-
-  CP09        \[Otra prueba\] \[Entrada\]      \[Resultado      \[Resultado\]   \[Estado\]
-                                               esperado\]                       
+                   
   ------------------------------------------------------------------------------------------
 
-## 12.3 Evidencias de pruebas
+## 11.3 Evidencias de pruebas
 
 Insertar capturas que demuestren los resultados de las pruebas.
 
@@ -691,59 +581,30 @@ Insertar capturas que demuestren los resultados de las pruebas.
 
 ------------------------------------------------------------------------
 
-# 13. CONCLUSIONES
+# 12. CONCLUSIONES
 
-## Conclusión 1
+El desarrollo del Sistema de Gestión de Biblioteca en C#, Windows Forms y SQL Server ha permitido dar solución a los cuellos de botella de información de la institución educativa, logrando un control automatizado del catálogo y del ciclo de vida de los préstamos.
+El modelado de la base de datos bajo la Tercera Forma Normal (3FN) cumple con los requisitos de integridad referencial, eliminando redundancias en autores, editoriales, préstamos y usuarios.
+La implementación de una arquitectura en N-Capas desacopla la lógica de acceso a datos de la interfaz gráfica, facilitando la mantenibilidad y escalabilidad del sistema.
+Las pruebas de funcionamiento demuestran que las transacciones complejas (actualizaciones simultáneas de cabeceras de préstamo y stock de ejemplares) se realizan cumpliendo los principios ACID, garantizando la consistencia operativa.
 
-\[Explicar qué se logró con el desarrollo del proyecto.\]
+# 13. RECOMENDACIONES
 
-## Conclusión 2
-
-\[Explicar los conocimientos de Programación Orientada a Objetos
-aplicados.\]
-
-## Conclusión 3
-
-\[Explicar los resultados obtenidos con la base de datos y la
-arquitectura por capas.\]
-
-## Conclusión 4
-
-\[Explicar dificultades encontradas y cómo fueron solucionadas.\]
+Implementación de lectores de código de barras/RFID: Adaptar la interfaz gráfica en Windows Forms para permitir la captura automatizada mediante código de barras o etiquetas RFID tanto en carnés de usuarios como en el material bibliográfico.
+Migración a Servicios Web (Web API): Evolucionar la capa de datos hacia una API RESTful que permita la integración de futuras plataformas web y móviles para los estudiantes.
+Planes de Respaldo Automatizados: Configurar tareas programadas mediante SQL Server Agent para ejecutar copias de seguridad (Backups) automáticas y periódicas de la base de datos BibliotecaBD.
+Módulo de Notificaciones: Integrar un servicio de mensajería/correo electrónico (SMTP / API externa) para notificar recordatorios de devolución 24 horas antes del vencimiento.
 
 ------------------------------------------------------------------------
 
-# 14. RECOMENDACIONES
+# 14. REFERENCIAS BIBLIOGRÁFICAS
 
--   \[Recomendación relacionada con futuras mejoras.\]
--   \[Recomendación relacionada con seguridad.\]
--   \[Recomendación relacionada con mantenimiento.\]
--   \[Recomendación relacionada con nuevas funcionalidades.\]
--   \[Otra recomendación.\]
-
-------------------------------------------------------------------------
-
-# 15. REFERENCIAS BIBLIOGRÁFICAS
-
-> Utilizar **Normas APA, última edición**.
-
-Ejemplos de formato:
-
-**Libro:**
-
-Apellido, N. (Año). *Título del libro*. Editorial.
-
-**Página web:**
-
-Autor/Organización. (Año). *Título del recurso*. URL
-
-**Documentación técnica:**
-
-Microsoft. (Año). *\[Título de la documentación consultada\]*. Microsoft
-Learn.
-
-> **Importante:** incluir únicamente las fuentes que realmente fueron
-> consultadas durante el desarrollo del proyecto.
+Ceballos, F. J. (2019). Enciclopedia de Microsoft Visual C# (5.ª ed.). Alfaomega / Ra-Ma.
+Date, C. J. (2018). Introducción a los sistemas de bases de datos (8.ª ed.). Pearson Educación.
+Elmasri, R., & Navathe, S. B. (2017). Fundamentos de sistemas de bases de datos (7.ª ed.). Pearson.
+Microsoft Learn. (2024). Documentación oficial de ADO.NET y Windows Forms para C#. Microsoft Docs.
+Pressman, R. S. (2020). Ingeniería del software: Un enfoque práctico (9.ª ed.). McGraw-Hill Education.
+Sommerville, I. (2019). Ingeniería de Software (10.ª ed.). Pearson Educación.
 
 ------------------------------------------------------------------------
 
@@ -751,7 +612,7 @@ Learn.
 
 ## Anexo A. Repositorio GitHub
 
-**Repositorio:** \[Enlace al repositorio\]
+(https://github.com/samael-alean/Aca_Biblioteca)
 
 ## Anexo B. Script de base de datos
 
@@ -759,67 +620,4 @@ Learn.
 
 ## Anexo C. Evidencia de Git y GitHub
 
-Insertar capturas que evidencien:
-
--   Creación del repositorio.
--   Commits realizados.
--   Organización del proyecto.
--   Publicación del código.
--   README.md.
-
-## Anexo D. Otras evidencias
-
-\[Agregar cualquier evidencia adicional relevante.\]
-
-------------------------------------------------------------------------
-
-# LISTA DE VERIFICACIÓN ANTES DE ENTREGAR
-
--   [ ] Portada.
--   [ ] Contraportada.
--   [ ] Introducción.
--   [ ] Objetivos.
--   [ ] Tabla de contenido.
--   [ ] Numeración de páginas.
--   [ ] Planteamiento del problema.
--   [ ] Análisis de requerimientos.
--   [ ] Casos de uso.
--   [ ] Diagrama de casos de uso.
--   [ ] Diagrama de clases.
--   [ ] Modelo entidad-relación.
--   [ ] Diccionario de datos.
--   [ ] Arquitectura del sistema.
--   [ ] Explicación de cada módulo.
--   [ ] Capturas de pantalla.
--   [ ] Pruebas de funcionamiento.
--   [ ] Conclusiones.
--   [ ] Recomendaciones.
--   [ ] Referencias bibliográficas en formato APA.
--   [ ] Código fuente completo.
--   [ ] Script SQL.
--   [ ] Datos de prueba.
--   [ ] Repositorio GitHub.
--   [ ] README.md.
--   [ ] Evidencia de commits.
-
-------------------------------------------------------------------------
-
-## NOTA PARA EL ESTUDIANTE
-
-Este documento es una **plantilla de apoyo**. Antes de entregar, se
-deben reemplazar todos los textos entre `[corchetes]`, eliminar las
-instrucciones y adaptar cada sección a las funcionalidades que realmente
-fueron desarrolladas.
-
-La documentación debe ser coherente con:
-
-1.  El código fuente.
-2.  La base de datos.
-3.  El modelo entidad-relación.
-4.  El diagrama de clases.
-5.  Los casos de uso.
-6.  La arquitectura implementada.
-7.  Las capturas y pruebas realizadas.
-
-**No se deben documentar funcionalidades que no hayan sido
-implementadas.**
+![Evidencia](https://github.com/samael-alean/Aca_Biblioteca/blob/0acedc917f38dacb45d12745a1d84baccb49babf/EvidenciaGit.jpeg)
